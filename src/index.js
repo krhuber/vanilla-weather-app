@@ -11,18 +11,24 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
- // console.log(response.data);
-  document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
 
-  document.querySelector("#city");.innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.name;
 
-  document.querySelector("#description").innerHTML = response.data.weather[0].description;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 
-  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
 
-  document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 let apiKey = "64f18b4413b6b44d53aaeab0328413a9";
